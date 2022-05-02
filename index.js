@@ -1,9 +1,12 @@
+const generateHTML = require('./src/generateHTML');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern'); 
+
+const teamArray = [];
 
 const addManager = () => {
   return inquirer.prompt ([
@@ -66,6 +69,7 @@ const addManager = () => {
     const { name, id, email, officeNumber } = managerInput;
     const manager = new Manager (name, id, email, officeNumber);
 
+    teamArray.push(manager);
     console.log(manager);
   })
 };
@@ -150,7 +154,56 @@ const addEmployee = () => {
         }
       }
     },
-    
-  
+    {
+      type: 'confirm',
+      name: 'confirmAddEmployee',
+      message: 'Do you want to add more team members?',
+      default: false
+    }
   ])
-}
+  .then(employeeData => {
+    let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+    let employee;
+
+    if (role === 'Engineer') {
+      employee = new Engineer (name, id, email, github);
+
+      console.log(employee);
+    } else if (role === 'Intern') {
+      employee = new Intern (name, id, email, school);
+
+      console.log(employee);
+    }
+
+    teamArray.push(employee);
+
+    if (confirmAddEmployee) {
+      return addEmployee(teamArray);
+    } else {
+      return teamArray;
+    }
+  })
+};
+
+const createFile = data => {
+  fs.createFile('./dist/index.html', data, err => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log('Congradulations! Your team has successfully been created!')
+    }
+  })
+};
+
+addManager()
+  .then(addEmployee)
+  .then(teamArray => {
+    return generateHTML(teamArray);
+  })
+  .then(pageHTML => {
+    return createFile(pageHTML);
+  })
+  .catch(err => {
+    console.log(err);
+  });
