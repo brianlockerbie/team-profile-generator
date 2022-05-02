@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianlockerbie/team-profile-generator.git"
+  },
+  "author": "Brian Lockerbie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brianlockerbie/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/brianlockerbie/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}
