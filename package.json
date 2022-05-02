@@ -18,5 +18,8 @@
   "homepage": "https://github.com/brianlockerbie/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^28.0.3"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
