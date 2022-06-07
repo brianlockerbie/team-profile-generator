@@ -86,4 +86,4 @@ THEN I exit the application, and the HTML is generated
 
 
 ## Screenshot
-<img src="team-profile-generator.png">
+<img src="team-profile-generator-example.png">
