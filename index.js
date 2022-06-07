@@ -185,8 +185,8 @@ const addEmployee = () => {
   })
 };
 
-const createFile = data => {
-  fs.createFile('./dist/index.html', data, err => {
+const writeFile = data => {
+  fs.writeFile('./dist/index.html', data, err => {
     if (err) {
       console.log(err);
       return;
@@ -202,7 +202,7 @@ addManager()
     return generateHTML(teamArray);
   })
   .then(pageHTML => {
-    return createFile(pageHTML);
+    return writeFile(pageHTML);
   })
   .catch(err => {
     console.log(err);
