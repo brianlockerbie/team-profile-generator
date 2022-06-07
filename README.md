@@ -35,8 +35,7 @@ This application was built with Node.js. It is a command line application that t
   <a name="usage"></a>
 
   ## Usage
-  View video walkthrough on how to use this application. 
-
+  View video walkthrough on how to use this application. https://drive.google.com/file/d/1HSfNE8VwWTKqD7WeNsrs2kksJ2Gye4R3/view
   
   <a name="license"></a>
 
@@ -84,3 +83,7 @@ WHEN I select the intern option
 THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
+
+
+## Screenshot
+<img src="team-profile-generator.png">
