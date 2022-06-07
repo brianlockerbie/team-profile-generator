@@ -3,6 +3,7 @@
 
 
 ## Description
+This application was built with Node.js. It is a command line application that takes information about employees & interns on a software engineering team. After answering multiple questions, this application will generate an HTML webpage that displats summaries for each employee/intern. 
   
   <br/>
   <br/>
@@ -34,7 +35,7 @@
   <a name="usage"></a>
 
   ## Usage
-  
+  View video walkthrough on how to use this application. 
 
   
   <a name="license"></a>
