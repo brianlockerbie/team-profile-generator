@@ -30,6 +30,7 @@ This application was built with Node.js. It is a command line application that t
 
   <a name="installation"></a>
   ## Installation
+  First clone this repository & type "npm i" in the terimanl. From there you will install Node.js to your computer. Once installed, type "node index.js" in the terminal. Answer all of the prompts to generate a index.html file. The new index.html file will be located in a folder called "dist" in the root directory.
   
 
   <a name="usage"></a>
