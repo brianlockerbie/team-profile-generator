@@ -2,7 +2,7 @@
 
 
 ## Description
-This application was built with Node.js. It is a command line application that takes information about employees & interns on a software engineering team. After answering multiple questions, this application will generate an HTML webpage that displats summaries for each employee/intern. 
+This application was built with Node.js. It is a command line application that takes information about employees & interns on a software engineering team. After answering multiple questions, this application will generate an HTML webpage that displays summaries for each employee/intern. 
   
   <br/>
   <br/>
